@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/carllaliberte/epsilon-protocol/schema/epsilon.v0.json",
+  "title": "EPSILON v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "epsilon_id", "modele", "simule", "juridiction", "langue", "pose_at"],
+  "properties": {
+    "format": { "const": "epsilon.v0" },
+    "epsilon_id": { "type": "string" },
+    "quelle_id": { "type": ["string", "null"] },
+    "temoin_id": { "type": ["string", "null"] },
+    "modele": { "enum": ["none", "asymptotic", "iid", "composable"] },
+    "epsilon": { "type": ["number", "null"], "exclusiveMinimum": 0, "maximum": 1 },
+    "hmin": { "type": ["number", "null"], "minimum": 0, "maximum": 8 },
+    "simule": { "type": "boolean" },
+    "juridiction": { "type": "string", "examples": ["QC"] },
+    "langue": { "type": "string", "examples": ["fr-CA"] },
+    "pose_at": { "type": "string" },
+    "note": { "type": "string" }
+  }
+}

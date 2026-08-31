@@ -1,0 +1,14 @@
+{
+  "format": "epsilon.v0",
+  "epsilon_id": "EP-fictif-001",
+  "quelle_id": null,
+  "temoin_id": null,
+  "modele": "none",
+  "epsilon": null,
+  "hmin": null,
+  "simule": true,
+  "juridiction": "QC",
+  "langue": "fr-CA",
+  "pose_at": "2026-08-31T21:00:00Z",
+  "note": "Acte fictif. Pas de preuve. ε absent. C'est le terrain."
+}
