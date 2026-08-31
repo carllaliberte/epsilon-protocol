@@ -13,6 +13,8 @@
     "modele": { "enum": ["none", "asymptotic", "iid", "composable"] },
     "epsilon": { "type": ["number", "null"], "exclusiveMinimum": 0, "maximum": 1 },
     "hmin": { "type": ["number", "null"], "minimum": 0, "maximum": 8 },
+    "plafond": { "type": ["number", "null"], "exclusiveMinimum": 0, "maximum": 1 },
+    "termes": { "type": "array", "items": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 } },
     "simule": { "type": "boolean" },
     "juridiction": { "type": "string", "examples": ["QC"] },
     "langue": { "type": "string", "examples": ["fr-CA"] },
