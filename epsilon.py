@@ -40,11 +40,11 @@ def _garde(carte: dict) -> None:
             raise SystemExit("refus : modele none exige epsilon null")
     else:
         if not isinstance(eps, (int, float)) or isinstance(eps, bool):
-            raise SystemExit("refus : " + modele + " exige epsilon dans (0, 1]")
+            raise SystemExit("refus : " + modele + " exige epsilon dans (0, 1)")
         if eps <= 0:
             raise SystemExit("refus : epsilon 0. un échantillon fini n'a pas d'avantage nul")
-        if eps > 1:
-            raise SystemExit("refus : epsilon > 1")
+        if eps >= 1:
+            raise SystemExit("refus : epsilon hors (0, 1)")
     if hmin is not None:
         if not isinstance(hmin, (int, float)) or isinstance(hmin, bool):
             raise SystemExit("hmin : nombre ou null")
