@@ -119,10 +119,14 @@ class ComposableNeedsEpsilonInOpenUnitInterval(unittest.TestCase):
     def test_composable_without_epsilon_refuses(self):
         msg = _refus(epsilon.ecrire, modele="composable")
         self.assertIn("refus", msg)
+        self.assertIn("(0, 1)", msg)
+        self.assertNotIn("(0, 1]", msg)
 
     def test_composable_null_epsilon_refuses(self):
         msg = _refus(epsilon.juger, _card(modele="composable", epsilon=None, simule=False))
         self.assertIn("refus", msg)
+        self.assertIn("(0, 1)", msg)
+        self.assertNotIn("(0, 1]", msg)
 
     def test_composable_epsilon_zero_refuses(self):
         msg = _refus(epsilon.ecrire, modele="composable", epsilon=0)
@@ -132,9 +136,16 @@ class ComposableNeedsEpsilonInOpenUnitInterval(unittest.TestCase):
         msg = _refus(epsilon.ecrire, modele="composable", epsilon=-0.1)
         self.assertIn("refus", msg)
 
+    def test_composable_epsilon_one_refuses(self):
+        msg = _refus(epsilon.ecrire, modele="composable", epsilon=1)
+        self.assertIn("refus", msg)
+        self.assertIn("(0, 1)", msg)
+        self.assertNotIn("(0, 1]", msg)
+
     def test_composable_epsilon_above_one_refuses(self):
         msg = _refus(epsilon.ecrire, modele="composable", epsilon=1.1)
         self.assertIn("refus", msg)
+        self.assertIn("(0, 1)", msg)
 
     def test_composable_with_epsilon_in_interval_allows(self):
         carte = epsilon.ecrire(modele="composable", epsilon=1e-6)

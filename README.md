@@ -50,7 +50,7 @@ This rail does not collapse the three-consumer FLAG into one rule:
 | famille sdk (`d55799e`) | `classique` |
 | GARDE | fail-closed |
 
-Imagine those closed. Judgment here is Carl: `python3 epsilon.py juger`.
+Those consumers stay closed. Judgment here is Carl: `python3 epsilon.py juger`.
 
 ## How to run
 
