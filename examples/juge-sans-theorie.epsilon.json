@@ -1,0 +1,16 @@
+{
+  "format": "epsilon.v0",
+  "epsilon_id": "EP-juge-sans-theorie",
+  "quelle_id": null,
+  "temoin_id": null,
+  "modele": "composable",
+  "epsilon": 1e-6,
+  "hmin": 7.2,
+  "plafond": 1e-6,
+  "termes": [],
+  "simule": false,
+  "juridiction": "QC",
+  "langue": "fr-CA",
+  "pose_at": "2026-09-03T00:00:00Z",
+  "note": "v0. Théorie EasyCrypt absente (theorie/epsilon.ec, formal-layer/leftover.ec). leftover-hash = rappel. Pas une extraction. Pas un photon."
+}
